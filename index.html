@@ -30,7 +30,6 @@
             background: var(--white);
         }
 
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -104,7 +103,6 @@
             width: 100%;
         }
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -223,7 +221,6 @@
             background: var(--secondary);
         }
 
-        /* Section Styles */
         section {
             padding: 6rem 2rem;
         }
@@ -264,7 +261,6 @@
             margin: 0 auto;
         }
 
-        /* About Section */
         #about {
             background: var(--bg-light);
         }
@@ -321,7 +317,120 @@
             font-weight: 500;
         }
 
-        /* Skills Section */
+        .education-section, .languages-section {
+            margin-top: 5rem;
+        }
+
+        .subsection-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .education-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .education-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.1);
+            border-color: var(--accent);
+        }
+
+        .institution-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .education-content {
+            flex: 1;
+        }
+
+        .degree-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .institution-name {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--accent);
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 20px;
+            margin-left: 0.5rem;
+        }
+
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .language-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .language-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 212, 255, 0.15);
+            border-color: var(--accent);
+        }
+
+        .language-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .language-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .language-level {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -363,7 +472,6 @@
             color: var(--primary);
         }
 
-        /* Projects Section */
         #projects {
             background: var(--bg-light);
         }
@@ -390,7 +498,6 @@
             margin: 0 auto;
         }
 
-        /* Contact Section */
         #contact {
             background: var(--primary);
             color: var(--white);
@@ -436,7 +543,6 @@
             border-color: var(--accent);
         }
 
-        /* Footer */
         footer {
             background: var(--primary);
             color: rgba(255, 255, 255, 0.7);
@@ -450,7 +556,6 @@
             color: var(--white);
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -468,12 +573,30 @@
                 font-size: 2.5rem;
             }
 
+            .subsection-title {
+                font-size: 2rem;
+            }
+
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
 
             .about-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .education-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .institution-logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .languages-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -487,7 +610,6 @@
             }
         }
 
-        /* Scroll animations */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -501,7 +623,6 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="container">
             <div class="logo">JP</div>
@@ -514,7 +635,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -529,7 +649,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <div class="container">
             <div class="section-header fade-in">
@@ -564,10 +683,66 @@
                     </div>
                 </div>
             </div>
+
+            <div class="education-section fade-in">
+                <h3 class="subsection-title">Formación Académica</h3>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Ulima-logo-color.svg/1200px-Ulima-logo-color.svg.png" alt="Universidad de Lima" class="institution-logo">
+                        <div class="education-content">
+                            <h4 class="degree-title">Bachiller en Ingeniería Industrial</h4>
+                            <p class="institution-name">Universidad de Lima</p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1200px-IBM_logo.svg.png" alt="IBM" class="institution-logo">
+                        <div class="education-content">
+                            <h4 class="degree-title">AI Engineering <span class="badge">En Curso</span></h4>
+                            <p class="institution-name">IBM</p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <img src="https://www.utec.edu.pe/sites/all/themes/utec_theme/logo.png" alt="UTEC" class="institution-logo">
+                        <div class="education-content">
+                            <h4 class="degree-title">Arquitectura de Datos</h4>
+                            <p class="institution-name">UTEC</p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <img src="https://mba.upc.edu.pe/wp-content/uploads/2023/08/logo-pacifico-business-school-1.png" alt="Pacífico Business School" class="institution-logo">
+                        <div class="education-content">
+                            <h4 class="degree-title">Data Science</h4>
+                            <p class="institution-name">Pacífico Business School</p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <img src="https://www.ctic.uni.edu.pe/wp-content/uploads/2022/08/logo-ctic-uni.png" alt="CTIC UNI" class="institution-logo">
+                        <div class="education-content">
+                            <h4 class="degree-title">Business Intelligence & Big Data</h4>
+                            <p class="institution-name">CTIC UNI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="languages-section fade-in">
+                <h3 class="subsection-title">Idiomas</h3>
+                <div class="languages-grid">
+                    <div class="language-card">
+                        <div class="language-icon">🇬🇧</div>
+                        <h4 class="language-name">Inglés</h4>
+                        <p class="language-level">Avanzado</p>
+                    </div>
+                    <div class="language-card">
+                        <div class="language-icon">🇫🇷</div>
+                        <h4 class="language-name">Francés</h4>
+                        <p class="language-level">Básico</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills">
         <div class="container">
             <div class="section-header fade-in">
@@ -583,7 +758,7 @@
                     <h3 class="skill-name">Power BI</h3>
                 </div>
                 <div class="skill-card fade-in">
-                    <img src="https://w7.pngwing.com/pngs/417/369/png-transparent-microsoft-excel-logo-microsoft-word-microsoft-office-365-pivot-table-excel-office-xlsx-icon-microsoft-excel-logo-miscellaneous-template-angle.png" alt="Excel" class="skill-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="Excel" class="skill-logo">
                     <h3 class="skill-name">Excel</h3>
                 </div>
                 <div class="skill-card fade-in">
@@ -638,7 +813,6 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <div class="container">
             <div class="section-header fade-in">
@@ -654,7 +828,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <div class="section-header fade-in">
@@ -672,13 +845,11 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 <strong>James Paz</strong> - Analytics Specialist. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -692,7 +863,6 @@
             });
         });
 
-        // Intersection Observer for fade-in animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
