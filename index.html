@@ -324,19 +324,24 @@
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
         .skill-card {
             background: var(--white);
-            padding: 3rem 2rem;
+            padding: 2rem 1.5rem;
             border-radius: 20px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 140px;
         }
 
         .skill-card:hover {
@@ -345,31 +350,17 @@
             border-color: var(--accent);
         }
 
-        .skill-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, var(--accent), var(--primary));
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: var(--white);
-            font-weight: 900;
-            font-family: 'Playfair Display', serif;
+        .skill-logo {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 1rem;
         }
 
         .skill-name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .skill-description {
-            color: var(--text-light);
             font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary);
         }
 
         /* Projects Section */
@@ -487,7 +478,7 @@
             }
 
             .skills-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             }
 
             .contact-email {
@@ -581,25 +572,67 @@
         <div class="container">
             <div class="section-header fade-in">
                 <div class="section-label">Habilidades</div>
-                <h2 class="section-title">Herramientas Clave</h2>
+                <h2 class="section-title">Herramientas & Tecnologías</h2>
                 <p class="section-description">
-                    Especializado en las herramientas más potentes para análisis y visualización de datos empresariales
+                    Stack tecnológico completo para análisis, visualización y arquitectura de datos
                 </p>
             </div>
             <div class="skills-grid">
                 <div class="skill-card fade-in">
-                    <div class="skill-icon">PBI</div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" class="skill-logo">
                     <h3 class="skill-name">Power BI</h3>
-                    <p class="skill-description">
-                        Creación de dashboards interactivos, modelado de datos, DAX avanzado y soluciones de Business Intelligence end-to-end
-                    </p>
                 </div>
                 <div class="skill-card fade-in">
-                    <div class="skill-icon">XL</div>
+                    <img src="https://w7.pngwing.com/pngs/417/369/png-transparent-microsoft-excel-logo-microsoft-word-microsoft-office-365-pivot-table-excel-office-xlsx-icon-microsoft-excel-logo-miscellaneous-template-angle.png" alt="Excel" class="skill-logo">
                     <h3 class="skill-name">Excel</h3>
-                    <p class="skill-description">
-                        Análisis avanzado de datos, tablas dinámicas, macros VBA, funciones complejas y automatización de procesos analíticos
-                    </p>
+                </div>
+                <div class="skill-card fade-in">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" class="skill-logo">
+                    <h3 class="skill-name">Python</h3>
+                </div>
+                <div class="skill-card fade-in">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL" class="skill-logo">
+                    <h3 class="skill-name">SQL</h3>
+                </div>
+                <div class="skill-card fade-in">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code" class="skill-logo">
+                    <h3 class="skill-name">VS Code</h3>
+                </div>
+                <div class="skill-card fade-in">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg" alt="Azure" class="skill-logo">
+                    <h3 class="skill-name">Azure</h3>
+                </div>
+                <div class="skill-card fade-in">
+                    <img src="https://www.gstatic.com/analytics-suite/header/suite/v2/ic_data_studio.svg" alt="Looker Studio" class="skill-logo">
+                    <h3 class="skill-name">Looker Studio</h3>
+                </div>
+                <div class="skill-card fade-in">
+                    <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau" class="skill-logo">
+                    <h3 class="skill-name">Tableau</h3>
+                </div>
+                <div class="skill-card fade-in">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Databricks_Logo.png" alt="Databricks" class="skill-logo">
+                    <h3 class="skill-name">Databricks</h3>
+                </div>
+                <div class="skill-card fade-in">
+                    <img src="https://www.svgrepo.com/show/353658/azure-icon.svg" alt="Data Factory" class="skill-logo">
+                    <h3 class="skill-name">Data Factory</h3>
+                </div>
+                <div class="skill-card fade-in">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas" class="skill-logo">
+                    <h3 class="skill-name">Pandas</h3>
+                </div>
+                <div class="skill-card fade-in">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit-learn" class="skill-logo">
+                    <h3 class="skill-name">Scikit-learn</h3>
+                </div>
+                <div class="skill-card fade-in">
+                    <img src="https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/powerautomate/icon.png" alt="Power Automate" class="skill-logo">
+                    <h3 class="skill-name">Power Automate</h3>
+                </div>
+                <div class="skill-card fade-in">
+                    <img src="https://connectoricons-prod.azureedge.net/releases/v1.0.1669/1.0.1669.3522/powerapps/icon.png" alt="Power Apps" class="skill-logo">
+                    <h3 class="skill-name">Power Apps</h3>
                 </div>
             </div>
         </div>
